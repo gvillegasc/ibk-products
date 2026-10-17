@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "lineLength": 120,
+  "indentation": {
+    "spaces": 4
+  },
+  "tabWidth": 6,
+  "maximumBlankLines": 1,
+  "respectsExistingLineBreaks": true,
+  "lineBreakBeforeControlFlowKeywords": false,
+  "lineBreakBeforeEachArgument": true,
+  "lineBreakBeforeEachGenericRequirement": false,
+  "lineBreakAroundMultilineExpressionChainComponents": false,
+  "prioritizeKeepingFunctionOutputTogether": true,
+  "indentConditionalCompilationBlocks": false,
+  "fileScopedDeclarationPrivacy": {
+    "accessLevel": "private"
+  },
+  "rules": {
+    "AlwaysUseLowerCamelCase": true,
+    "DoNotUseSemicolons": true,
+    "DontRepeatTypeInStaticProperties": true,
+    "IdentifiersMustBeASCII": true,
+    "NoAccessLevelOnExtensionDeclaration": true,
+    "NoParensAroundConditions": true,
+    "NoVoidReturnOnFunctionSignature": true,
+    "OneVariableDeclarationPerLine": true,
+    "OrderedImports": true,
+    "UseLetInEveryBoundCaseVariable": true,
+    "UseSingleLinePropertyGetter": true,
+    "UseTripleSlashForDocumentationComments": true,
+    "ValidateDocumentationComments": true
+  }
+}
