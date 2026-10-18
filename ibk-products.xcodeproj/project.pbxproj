@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A26BB823083E00000BD576F /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 6A26BB813083E00000BD576F /* CombineExt */; };
+		6A26BB923083E10000BD576F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6A26BB913083E10000BD576F /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A26BB823083E00000BD576F /* CombineExt in Frameworks */,
+				6A26BB923083E10000BD576F /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,7 @@
 			name = "ibk-products";
 			packageProductDependencies = (
 				6A26BB813083E00000BD576F /* CombineExt */,
+				6A26BB913083E10000BD576F /* SDWebImage */,
 			);
 			productName = "ibk-products";
 			productReference = 6A26BB513083D14200BD576F /* ibk-products.app */;
@@ -116,6 +119,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				6A26BB803083E00000BD576F /* XCRemoteSwiftPackageReference "CombineExt" */,
+				6A26BB903083E10000BD576F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6A26BB523083D14200BD576F /* Products */;
@@ -385,6 +389,14 @@
 				minimumVersion = 1.9.0;
 			};
 		};
+		6A26BB903083E10000BD576F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.7;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -392,6 +404,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6A26BB803083E00000BD576F /* XCRemoteSwiftPackageReference "CombineExt" */;
 			productName = CombineExt;
+		};
+		6A26BB913083E10000BD576F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A26BB903083E10000BD576F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
