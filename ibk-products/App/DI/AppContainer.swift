@@ -12,6 +12,7 @@ final class AppContainer {
 
     let httpClient: any HTTPClient
     let productRepository: any ProductRepository
+    let themeService: ThemeService
 
     private static let apiBaseURL: URL = {
         guard let url = URL(string: "https://api.escuelajs.co/api/v1") else {
@@ -22,8 +23,12 @@ final class AppContainer {
 
     // MARK: - Initialization
 
-    init(httpClient: any HTTPClient = URLSessionHTTPClient(baseURL: AppContainer.apiBaseURL)) {
+    init(
+        httpClient: any HTTPClient = URLSessionHTTPClient(baseURL: AppContainer.apiBaseURL),
+        preferencesStore: any PreferencesStore = UserDefaultsPreferencesStore()
+    ) {
         self.httpClient = httpClient
         self.productRepository = RemoteProductRepository(httpClient: httpClient)
+        self.themeService = ThemeService(preferencesStore: preferencesStore)
     }
 }

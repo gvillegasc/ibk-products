@@ -34,7 +34,7 @@ final class AppCoordinator: Coordinator {
         ]
         childCoordinators.forEach { $0.start() }
 
-        let tabBarController = MainTabBarController()
+        let tabBarController = MainTabBarController(themeService: container.themeService)
         tabBarController.setViewControllers(
             [productsNavigationController, menuNavigationController],
             animated: false

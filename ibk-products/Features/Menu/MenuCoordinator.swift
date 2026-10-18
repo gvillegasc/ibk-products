@@ -32,10 +32,7 @@ final class MenuCoordinator: Coordinator {
         )
         navigationController.navigationBar.prefersLargeTitles = true
 
-        let placeholderViewController = UIViewController()
-        placeholderViewController.title = String(localized: "Menú")
-        placeholderViewController.view.backgroundColor = .systemBackground
-
-        navigationController.setViewControllers([placeholderViewController], animated: false)
+        let viewModel = MenuViewModel.make(themeService: container.themeService)
+        navigationController.setViewControllers([MenuViewController(viewModel: viewModel)], animated: false)
     }
 }
