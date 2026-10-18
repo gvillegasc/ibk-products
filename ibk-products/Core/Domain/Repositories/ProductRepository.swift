@@ -8,11 +8,6 @@
 import Combine
 import Foundation
 
-nonisolated enum ProductRepositoryError: Error, Equatable {
-    case noConnection
-    case unavailable
-}
-
 nonisolated protocol ProductRepository: Sendable {
-    func fetchProducts(offset: Int, limit: Int) -> AnyPublisher<[Product], ProductRepositoryError>
+    func fetchProducts(offset: Int, limit: Int) -> AnyPublisher<[Product], Error>
 }
