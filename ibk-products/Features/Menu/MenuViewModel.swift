@@ -25,6 +25,8 @@ final class MenuViewModel {
         themeService.$tabBarColor.assign(to: &$selectedColor)
     }
 
+    nonisolated deinit {}
+
     // MARK: - Public Methods
 
     func selectColor(at index: Int) {

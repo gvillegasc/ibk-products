@@ -22,6 +22,8 @@ final class ThemeService {
         self.tabBarColor = preferencesStore.string(for: .tabBarColor).flatMap(TabBarColor.init(rawValue:)) ?? .standard
     }
 
+    nonisolated deinit {}
+
     // MARK: - Public Methods
 
     func setTabBarColor(_ color: TabBarColor) {

@@ -25,6 +25,8 @@ final class ProductDetailViewModel {
         self.description = product.description
         self.imageURL = product.imageURLs.first
     }
+
+    nonisolated deinit {}
 }
 
 extension ProductDetailViewModel {

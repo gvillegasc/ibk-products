@@ -44,6 +44,8 @@ final class ProductListViewModel {
         self.hasMorePages = products.isEmpty
     }
 
+    nonisolated deinit {}
+
     // MARK: - Public Methods
 
     func loadFirstPageIfNeeded() {
