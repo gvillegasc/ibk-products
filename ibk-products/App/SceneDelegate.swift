@@ -12,6 +12,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    private var appCoordinator: AppCoordinator?
+
     // MARK: - Scene Connection
 
     func scene(
@@ -22,9 +24,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = ViewController()
-        window.makeKeyAndVisible()
+        let appCoordinator = AppCoordinator(window: window, container: AppContainer())
+        appCoordinator.start()
+
         self.window = window
+        self.appCoordinator = appCoordinator
     }
 
     // MARK: - Scene Disconnection
