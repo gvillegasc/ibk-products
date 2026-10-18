@@ -21,7 +21,7 @@
     "DoNotUseSemicolons": true,
     "DontRepeatTypeInStaticProperties": true,
     "IdentifiersMustBeASCII": true,
-    "NoAccessLevelOnExtensionDeclaration": true,
+    "NoAccessLevelOnExtensionDeclaration": false,
     "NoParensAroundConditions": true,
     "NoVoidReturnOnFunctionSignature": true,
     "OneVariableDeclarationPerLine": true,

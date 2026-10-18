@@ -11,11 +11,13 @@ final class AppContainer {
     // MARK: - Properties
 
     let httpClient: any HTTPClient
+    let productRepository: any ProductRepository
 
     // MARK: - Initializer
 
     init(httpClient: any HTTPClient = URLSessionHTTPClient(baseURL: AppContainer.apiBaseURL)) {
         self.httpClient = httpClient
+        self.productRepository = RemoteProductRepository(httpClient: httpClient)
     }
 
     // MARK: - Configuration
