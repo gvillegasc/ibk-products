@@ -18,14 +18,14 @@ nonisolated struct URLSessionHTTPClient: HTTPClient {
     private let baseURL: URL
     private let session: URLSession
 
-    // MARK: - Initializer
+    // MARK: - Initialization
 
     init(baseURL: URL, session: URLSession = .shared) {
         self.baseURL = baseURL
         self.session = session
     }
 
-    // MARK: - HTTPClient
+    // MARK: - Public Methods
 
     func request<Response: Decodable>(_ endpoint: Endpoint) -> AnyPublisher<Response, NetworkError> {
         let request: URLRequest
@@ -54,7 +54,7 @@ nonisolated struct URLSessionHTTPClient: HTTPClient {
             .eraseToAnyPublisher()
     }
 
-    // MARK: - Helpers
+    // MARK: - Private Methods
 
     private static func map(_ error: URLError) -> NetworkError {
         switch error.code {

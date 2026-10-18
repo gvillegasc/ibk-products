@@ -15,14 +15,14 @@ final class MenuCoordinator: Coordinator {
     private let navigationController: UINavigationController
     private let container: AppContainer
 
-    // MARK: - Initializer
+    // MARK: - Initialization
 
     init(navigationController: UINavigationController, container: AppContainer) {
         self.navigationController = navigationController
         self.container = container
     }
 
-    // MARK: - Start
+    // MARK: - Public Methods
 
     func start() {
         navigationController.tabBarItem = UITabBarItem(

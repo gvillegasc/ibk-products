@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6A26BB823083E00000BD576F /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 6A26BB813083E00000BD576F /* CombineExt */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		6A26BB513083D14200BD576F /* ibk-products.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ibk-products.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A26BB823083E00000BD576F /* CombineExt in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +84,7 @@
 			);
 			name = "ibk-products";
 			packageProductDependencies = (
+				6A26BB813083E00000BD576F /* CombineExt */,
 			);
 			productName = "ibk-products";
 			productReference = 6A26BB513083D14200BD576F /* ibk-products.app */;
@@ -108,6 +114,9 @@
 			);
 			mainGroup = 6A26BB483083D14200BD576F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6A26BB803083E00000BD576F /* XCRemoteSwiftPackageReference "CombineExt" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6A26BB523083D14200BD576F /* Products */;
 			projectDirPath = "";
@@ -366,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6A26BB803083E00000BD576F /* XCRemoteSwiftPackageReference "CombineExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineExt";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A26BB813083E00000BD576F /* CombineExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A26BB803083E00000BD576F /* XCRemoteSwiftPackageReference "CombineExt" */;
+			productName = CombineExt;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6A26BB493083D14200BD576F /* Project object */;
 }

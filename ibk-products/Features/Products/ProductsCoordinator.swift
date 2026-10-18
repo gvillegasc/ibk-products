@@ -15,14 +15,14 @@ final class ProductsCoordinator: Coordinator {
     private let navigationController: UINavigationController
     private let container: AppContainer
 
-    // MARK: - Initializer
+    // MARK: - Initialization
 
     init(navigationController: UINavigationController, container: AppContainer) {
         self.navigationController = navigationController
         self.container = container
     }
 
-    // MARK: - Start
+    // MARK: - Public Methods
 
     func start() {
         navigationController.tabBarItem = UITabBarItem(
@@ -32,10 +32,22 @@ final class ProductsCoordinator: Coordinator {
         )
         navigationController.navigationBar.prefersLargeTitles = true
 
-        let placeholderViewController = UIViewController()
-        placeholderViewController.title = String(localized: "Productos")
-        placeholderViewController.view.backgroundColor = .systemBackground
+        let viewModel = ProductListViewModel.make(repository: container.productRepository)
+        viewModel.onProductSelected = { [weak self] product in
+            self?.showDetail(for: product)
+        }
 
-        navigationController.setViewControllers([placeholderViewController], animated: false)
+        navigationController.setViewControllers([ProductListViewController(viewModel: viewModel)], animated: false)
+    }
+
+    // MARK: - Private Methods
+
+    private func showDetail(for product: Product) {
+        let placeholderViewController = UIViewController()
+        placeholderViewController.title = product.title
+        placeholderViewController.view.backgroundColor = .systemBackground
+        placeholderViewController.navigationItem.largeTitleDisplayMode = .never
+
+        navigationController.pushViewController(placeholderViewController, animated: true)
     }
 }

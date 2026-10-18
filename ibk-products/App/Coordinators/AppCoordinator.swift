@@ -15,14 +15,14 @@ final class AppCoordinator: Coordinator {
     private let window: UIWindow
     private let container: AppContainer
 
-    // MARK: - Initializer
+    // MARK: - Initialization
 
     init(window: UIWindow, container: AppContainer) {
         self.window = window
         self.container = container
     }
 
-    // MARK: - Start
+    // MARK: - Public Methods
 
     func start() {
         let productsNavigationController = UINavigationController()

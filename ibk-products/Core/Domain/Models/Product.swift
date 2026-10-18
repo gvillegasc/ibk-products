@@ -15,3 +15,36 @@ nonisolated struct Product: Identifiable, Hashable, Sendable {
     let categoryName: String
     let imageURLs: [URL]
 }
+
+// MARK: - Extensions
+
+nonisolated extension Array<Product> {
+    static func getMockData() -> [Product] {
+        [
+            Product(
+                id: 1,
+                title: "Classic Red Pullover Hoodie",
+                price: 10,
+                description: "Elevate your casual wardrobe with our Classic Red Pullover Hoodie.",
+                categoryName: "Clothes",
+                imageURLs: []
+            ),
+            Product(
+                id: 2,
+                title: "Classic Heather Gray Hoodie",
+                price: 69,
+                description: "Stay cozy and stylish with our Classic Heather Gray Hoodie.",
+                categoryName: "Clothes",
+                imageURLs: []
+            ),
+            Product(
+                id: 3,
+                title: "Classic Navy Blue Baseball Cap",
+                price: 61,
+                description: "Top off your casual look with our Classic Navy Blue Baseball Cap.",
+                categoryName: "Clothes",
+                imageURLs: []
+            ),
+        ]
+    }
+}

@@ -13,13 +13,13 @@ nonisolated struct RemoteProductRepository: ProductRepository {
 
     private let httpClient: any HTTPClient
 
-    // MARK: - Initializer
+    // MARK: - Initialization
 
     init(httpClient: any HTTPClient) {
         self.httpClient = httpClient
     }
 
-    // MARK: - ProductRepository
+    // MARK: - Public Methods
 
     func fetchProducts(offset: Int, limit: Int) -> AnyPublisher<[Product], Error> {
         httpClient.request(.products(offset: offset, limit: limit))

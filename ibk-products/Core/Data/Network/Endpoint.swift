@@ -18,7 +18,7 @@ nonisolated struct Endpoint: Sendable, Equatable {
     let method: HTTPMethod
     let queryItems: [URLQueryItem]
 
-    // MARK: - Initializer
+    // MARK: - Initialization
 
     init(path: String, method: HTTPMethod = .get, queryItems: [URLQueryItem] = []) {
         self.path = path
@@ -26,7 +26,7 @@ nonisolated struct Endpoint: Sendable, Equatable {
         self.queryItems = queryItems
     }
 
-    // MARK: - Request
+    // MARK: - Public Methods
 
     func makeRequest(baseURL: URL) throws(NetworkError) -> URLRequest {
         var components = URLComponents(url: baseURL.appending(path: path), resolvingAgainstBaseURL: false)
