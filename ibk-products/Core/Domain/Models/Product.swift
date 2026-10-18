@@ -48,3 +48,20 @@ nonisolated extension Array<Product> {
         ]
     }
 }
+
+nonisolated extension Product {
+    static func getMockData() -> Product {
+        Product(
+            id: 1,
+            title: "Classic Red Pullover Hoodie",
+            price: 10,
+            description: """
+                Elevate your casual wardrobe with our Classic Red Pullover Hoodie. Crafted with a soft cotton \
+                blend for ultimate comfort, this vibrant red hoodie features a kangaroo pocket, adjustable \
+                drawstring hood, and ribbed cuffs for a snug fit.
+                """,
+            categoryName: "Clothes",
+            imageURLs: [URL(string: "https://i.imgur.com/1twoaDy.jpeg")].compactMap { $0 }
+        )
+    }
+}

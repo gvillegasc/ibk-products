@@ -43,11 +43,7 @@ final class ProductsCoordinator: Coordinator {
     // MARK: - Private Methods
 
     private func showDetail(for product: Product) {
-        let placeholderViewController = UIViewController()
-        placeholderViewController.title = product.title
-        placeholderViewController.view.backgroundColor = .systemBackground
-        placeholderViewController.navigationItem.largeTitleDisplayMode = .never
-
-        navigationController.pushViewController(placeholderViewController, animated: true)
+        let viewModel = ProductDetailViewModel.make(product: product)
+        navigationController.pushViewController(ProductDetailViewController(viewModel: viewModel), animated: true)
     }
 }
